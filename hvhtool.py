@@ -54,13 +54,6 @@ banner = f"""
 \033[1;39m└──────────────────────────────────────────────────────────────┘
 \033[1;97m= = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 """
-#from datetime import date
-#import requests, random
-#import uuid, re
-#from pystyle import Write,Colors
-#from bs4 import BeautifulSoup
-#import socket
-  #os.system("")
 print(banner)
 setup=input(f'{vang}Nhập 1 để Setup tất cả thư viện | nếu set setup 1 tool vần lỗi thư viện thì chọn 2 | 2 lỗi thì cài lại python bản mới nhất ==> ai setup rồi thì ENTER để vào tool:')
 if setup == '1':
@@ -123,6 +116,13 @@ except ImportError:
   os.system("pip cài đặt random2")
   os.system("pip cài đặt selenium")
 #os.system("")
+#from datetime import date
+#import requests, random
+#import uuid, re
+#from pystyle import Write,Colors
+#from bs4 import BeautifulSoup
+#import socket
+  #os.system("")
 
 # màu
 
@@ -146,7 +146,7 @@ print(banner)
 os.system('cls')
 print(banner)
 
-KEYMUA = "HVH1562009"
+KEYMUA = "HVH11111"
 os.system("cls")
 time=datetime.now().strftime("%H:%M:%S")
 from pystyle import *
@@ -174,10 +174,10 @@ print("\033[1;31m─────────────────────
 print("\033[1;37m╔═══════════════════════╗")
 print("\033[1;37m║  \033[1;33m GOLIKE MOBILE+VPN  \033[1;37m ║")
 print("\033[1;37m╚═══════════════════════╝")
-print("\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 5 \033[1;31m] \033[1;32mTool GOLIKE AutoLinkedin \033[1;31m[\033[1;33m termux\033[1;31m]")
-print("\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 6 \033[1;31m] \033[1;32mTool GOLIKE INSTAGRAM \033[1;31m[\033[1;33m termux\033[1;31m]")
-print("\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 7 \033[1;31m] \033[1;32mTool GOLIKE INSTAGRAM RANDOM User_Agent \033[1;31m[\033[1;33m termux\033[1;31m]")
-print("\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 8 \033[1;31m] \033[1;32mTool GOLIKE TIKTOK \033[1;31m[\033[1;33m termux\033[1;31m]")
+print(f"\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 5 \033[1;31m] \033[1;32mTool GOLIKE AutoLinkedin \033[1;31m[\033[1;33m termux\033[1;31m] {red}(bảo trì) ")
+print(f"\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 6 \033[1;31m] \033[1;32mTool GOLIKE INSTAGRAM \033[1;31m[\033[1;33m termux\033[1;31m] {red}(bảo trì)")
+print(f"\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 7 \033[1;31m] \033[1;32mTool GOLIKE INSTAGRAM RANDOM User_Agent \033[1;31m[\033[1;33m termux\033[1;31m] {red}(bảo trì)")
+print(f"\033[1;31m[\033[1;37mBé Tập Code\033[1;31m] \033[1;37m=> \033[1;32mNhập Số \033[1;31m[\033[1;33m✨ 8 \033[1;31m] \033[1;32mTool GOLIKE TIKTOK \033[1;31m[\033[1;33m termux\033[1;31m] {red}(bảo trì)")
 print("\033[1;31m────────────────────────────────────────────────────────────")
 print("\033[1;37m╔═══════════════════════╗")
 print("\033[1;37m║  \033[1;33m TOOL TTC  \033[1;37m         ║")
