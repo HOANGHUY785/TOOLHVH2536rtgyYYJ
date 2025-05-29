@@ -113,7 +113,7 @@ def generate_key_and_url(ip_address):
     ngay = int(datetime.now().day)
     key1 = str(ngay * 27 + 27)
     ip_numbers = ''.join(filter(str.isdigit, ip_address))
-    key = f'NDK{key1}{ip_numbers}'
+    key = f'HVH{key1}{ip_numbers}'
     expiration_date = datetime.now().replace(hour=23, minute=59, second=0, microsecond=0)
     url = f'http://hvhtool.linkpc.net/?ma={key}'
     return url, key, expiration_date
@@ -141,10 +141,19 @@ def get_shortened_link_phu(url):
         return {"status": "error", "message": f"Lỗi khi rút gọn URL: {e}"}
 
 def main():
+    try: 
+        keydis=requests.get('https://raw.githubusercontent.com/HOANGHUY785/TOOLHVH2536rtgy/refs/heads/main/KEY.TXT').text.strip()
+    except:
+        print('lỗi khi tạo key trên discord')
     ip_address = get_ip_address()
     display_ip_address(ip_address)
+    try:
+        with open("key.txt", "r", encoding="utf-8") as file:
+            keydiscord = file.read()
+    except:
+        pass
 
-    if ip_address:
+    if ip_address or keydis==keydiscord:
         existing_key = kiem_tra_ip(ip_address)
         if existing_key:
             print(f"\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;35mTool còn hạn, mời bạn dùng tool...")
@@ -158,6 +167,7 @@ def main():
 
             with ThreadPoolExecutor(max_workers=2) as executor:
                 print("\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;32mNhập 1 Để Lấy Key \033[1;33m( Free )")
+                print("\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;32mVÀ CÓ THỂ NHẬP !getkey trên discord ĐỂ LẤY KEY \033[1;33m( Free )")
 
                 while True:
                     try:
@@ -174,12 +184,10 @@ def main():
                                 print('\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;35mLink Để Vượt Key Là \033[1;36m:', link_key_yeumoney)
 
                             while True:
-                                try: 
-                                    keydis=requests.get('https://raw.githubusercontent.com/HOANGHUY785/TOOLHVH2536rtgy/refs/heads/main/KEY.TXT').text.strip()
-                                except:
-                                    print('lỗi khi tạo key trên discord')
                                 keynhap = input('\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;33mKey Đã Vượt Là: \033[1;32m')
                                 if keynhap == key or keynhap==str(keydis):
+                                    with open("file.txt", "w", encoding="utf-8") as file:
+                                        file.write(keydis)
                                     print('Key Đúng Mời Bạn Dùng Tool')
                                     sleep(2)
                                     luu_thong_tin_ip(ip_address, keynhap, expiration_date)
