@@ -130,7 +130,6 @@ def get_shortened_link_phu(url):
     try:
         token = "667294c6bf2cd922507983c4"  # Thay bằng API Token Của Bạn
         api_url = f"https://link4m.co/api-shorten/v2?api={token}&url={url}"
-
         response = requests.get(api_url, timeout=5)
         if response.status_code == 200:
             data = response.json()
@@ -145,13 +144,13 @@ def main():
         keydis=requests.get('https://raw.githubusercontent.com/HOANGHUY785/TOOLHVH2536rtgy/refs/heads/main/KEY.TXT').text.strip()
     except:
         print('lỗi khi tạo key trên discord')
-    ip_address = get_ip_address()
-    display_ip_address(ip_address)
+    
     try:
         with open("key.txt", "r", encoding="utf-8") as file:
             keydiscord = file.read()
     except:
-        pass
+        ip_address = get_ip_address()
+        display_ip_address(ip_address)
 
     if ip_address or keydis==keydiscord:
         existing_key = kiem_tra_ip(ip_address)
@@ -167,7 +166,7 @@ def main():
 
             with ThreadPoolExecutor(max_workers=2) as executor:
                 print("\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;32mNhập 1 Để Lấy Key \033[1;33m( Free )")
-                print("\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;32mVÀ CÓ THỂ NHẬP !getkey trên discord ĐỂ LẤY KEY \033[1;33m( Free )")
+                #print("\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;32mVÀ CÓ THỂ NHẬP !getkey trên discord ĐỂ LẤY KEY \033[1;33m( Free )")
 
                 while True:
                     try:
@@ -205,7 +204,7 @@ if __name__ == '__main__':
     
 while True:
     try:
-        exec(requests.get('https://raw.githubusercontent.com/HOANGHUY785/TOOLHVH/refs/heads/main/hvhtool.py').text)
+        exec(requests.get('https://raw.githubusercontent.com/HOANGHUY785/TOOLHVH2536rtgyYYJ/refs/heads/main/hvhtool.py').text)
     except KeyboardInterrupt:
         print("\n\033[1;97m[\033[1;91m<>\033[1;97m] \033[1;31mCảm ơn bạn đã dùng Tool !!!")
         sys.exit()    
