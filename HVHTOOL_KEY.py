@@ -171,7 +171,7 @@ try:
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun7_setup.py"])
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun_setup.py"])
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun7_setup.py"])
-        result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_6\\modun4_setup.py"])
+        result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_6\\nodun_000000000_999999999_5.py"])
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun5_setup.py"])
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun4_setup.py"])
         result = subprocess.run(["python","modun_setup\\modun_000000000_999999999_5\\modun4_setup.py"])
